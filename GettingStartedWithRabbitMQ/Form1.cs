@@ -50,5 +50,13 @@ namespace GettingStartedWithRabbitMQ
         {
             producer.SendMessage(System.Text.Encoding.UTF8.GetBytes(textBox1.Text));
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                producer.SendMessage(System.Text.Encoding.UTF8.GetBytes(textBox1.Text));
+            }
+        }
     }
 }
